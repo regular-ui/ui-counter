@@ -1,0 +1,12 @@
+<span class="u-digitron u-digitron-{animation} {class}" r-hide={!visible}>
+    {#list 0..9 as _digit}
+    {#if digit === _digit}
+        <span class="digitron_digit"
+            r-animation={ANIMATIONS[animation + _direction] || ''}
+            style="animation-duration: {duration}ms;">{_digit}</span>
+        <span class="digitron_helper"
+            r-animation={HELPER_ANIMATIONS[animation + _direction] || ''}
+            style="animation-duration: {duration}ms;"><span>{_digit}</span></span>
+    {/if}
+    {/list}
+</span>

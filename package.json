@@ -1,0 +1,34 @@
+{
+  "name": "rgui-ui-counter",
+  "description": "Regular UI - Digitron, Counter",
+  "version": "0.2.0-alpha",
+  "author": "Rainfore <rainforest92@126.com>",
+  "main": "./index.js",
+  "repository": "regular-ui/ui-counter",
+  "homepage": "http://regular-ui.github.io",
+  "bugs": {
+    "url": "http://github.com/regular-ui/ui-counter/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "regular",
+    "ui",
+    "rgui",
+    "digitron",
+    "counter"
+  ],
+  "tags": [
+    "regular",
+    "ui",
+    "rgui",
+    "digitron",
+    "counter"
+  ],
+  "dependencies": {
+    "raf": "^3.3.0",
+    "rgui-ui-base": "^0.2.0-alpha.5"
+  },
+  "peerDependencies": {
+    "regularjs": "^0.4.3"
+  }
+}

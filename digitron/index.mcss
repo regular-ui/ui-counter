@@ -1,0 +1,107 @@
+.u-digitron {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    font-size: 36px;
+    line-height: 1;
+    width: 0.7em;
+    height: 1em;
+    color: $brand-primary;
+    perspective: 60;
+    -webkit-perspective: 60;
+
+    > span {
+        background: white;
+        position: absolute;
+        $animation-duration: 1s;
+    }
+
+    .digitron_helper {
+        display: none;
+    }
+}
+
+.u-digitron-flipHalf {
+    .digitron_digit, .digitron_helper {
+        overflow: hidden;
+        height: 50%;
+        left: 0;
+    }
+
+    > span.z-front {
+        z-index: 5;
+    }
+
+    .digitron_digit {
+        top: 0;
+        $transform-origin: center bottom;
+    }
+
+    .digitron_helper {
+        display: block;
+        margin-top: 1px;
+        top: 50%;
+        $transform-origin: center top;
+
+        > span {
+            margin-top: -0.5em;
+            display: block;
+        }
+    }
+}
+
+$keyframes(scrollUpIn, {
+    0% { $transform: translateY(100%); }
+    100% { $transform: translateY(0); }
+});
+
+$keyframes(scrollUpOut, {
+    0% { $transform: translateY(0); }
+    100% { $transform: translateY(-100%); }
+});
+
+$keyframes(scrollDownIn, {
+    0% { $transform: translateY(-100%); }
+    100% { $transform: translateY(0); }
+});
+
+$keyframes(scrollDownOut, {
+    0% { $transform: translateY(0); }
+    100% { $transform: translateY(100%); }
+});
+
+$keyframes(flipUpIn, {
+    0% { $transform: rotateX(270deg); }
+    50% { $transform: rotateX(270deg); }
+    100% { $transform: rotateX(360deg); }
+});
+
+$keyframes(flipUpOut, {
+    0% { $transform: rotateX(0); }
+    50% { $transform: rotateX(90deg); }
+    100% { $transform: rotateX(90deg); }
+});
+
+$keyframes(flipDownIn, {
+    0% { $transform: rotateX(90deg); }
+    50% { $transform: rotateX(90deg); }
+    100% { $transform: rotateX(0); }
+});
+
+$keyframes(flipDownOut, {
+    0% { $transform: rotateX(360deg); }
+    50% { $transform: rotateX(270deg); }
+    100% { $transform: rotateX(270deg); }
+});
+
+$keyframes(wait, {});
+
+.a-scrollUpIn { $animation-name: scrollUpIn; }
+.a-scrollUpOut { $animation-name: scrollUpOut; }
+.a-scrollDownIn { $animation-name: scrollDownIn; }
+.a-scrollDownOut { $animation-name: scrollDownOut; }
+.a-flipUpIn { $animation-name: flipUpIn; }
+.a-flipUpOut { $animation-name: flipUpOut; }
+.a-flipDownIn { $animation-name: flipDownIn; }
+.a-flipDownOut { $animation-name: flipDownOut; }
+.a-wait { $animation-name: wait; }

@@ -1,0 +1,5 @@
+<div class="u-counter {class}" r-hide={!visible}>
+    {#list 0..(length - 1) as index}
+    <digitron digit={_digits[index]} duration={duration} animation={animation} />
+    {/list}
+</div>
