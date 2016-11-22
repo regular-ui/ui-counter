@@ -1,5 +1,6 @@
 import { Component } from 'rgui-ui-base';
 import template from './index.rgl';
+import raf from 'raf';
 
 /**
  * @class Counter
@@ -30,6 +31,8 @@ const Counter = Component.extend({
         });
         this.supr();
         this.watch();
+
+        this._animate = this._animate.bind(this);
     },
     watch() {
         this.$watch('number', (number) => {
@@ -47,21 +50,33 @@ const Counter = Component.extend({
         this.data.autoStart && this.start();
     },
     destroy() {
-        clearInterval(this.interval);
+        // clearInterval(this.interval);
         this.supr();
     },
     start() {
-        this.interval = setInterval(() => {
-            if (this.data.number === this.data.end)
-                return clearInterval(this.interval);
+        setTimeout(this._animate, this.data.duration*1.1>>0);
+    },
+    _animate() {
+        if (this.data.number === this.data.end)
+            return;
 
-            this.data.number++;
-            this.$emit('tick', {
-                sender: this,
-                number: this.data.number,
-            });
-            this.$update();
-        }, this.data.duration);
+        // raf(this._animate);
+
+        // const now = Date.now();
+        // const duringTime = now - this._lastTime;
+        // if (duringTime < this.data.duration)
+        //     return;
+        // this._lastTime = now;
+
+        this.data.number++;
+        this.$emit('tick', {
+            sender: this,
+            number: this.data.number,
+        });
+
+        this.$update();
+
+        setTimeout(this._animate, this.data.duration*1.1>>0);
     },
     reset() {
         this.data.number = this.data.start;
