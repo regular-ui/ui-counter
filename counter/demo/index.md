@@ -4,10 +4,10 @@
 <div class="m-example"></div>
 
 ```xml
-<counter duration={duration} />
-<counter duration={duration} animation="scroll" />
-<counter duration={duration} animation="flip" />
-<counter duration={duration} animation="flipHalf" />
+<p><counter duration={duration} /></p>
+<p><counter duration={duration} animation="scroll" /></p>
+<p><counter duration={duration} animation="flip" /></p>
+<p><counter duration={duration} animation="flipHalf" /></p>
 ```
 
 ### 缓动
@@ -15,10 +15,10 @@
 <div class="m-example"></div>
 
 ```xml
-<counter duration={duration} on-tick={this._onTick($event)} />
-<counter duration={duration} animation="scroll" on-tick={this._onTick($event)} />
-<counter duration={duration} animation="flip" on-tick={this._onTick($event)} />
-<counter duration={duration} animation="flipHalf" on-tick={this._onTick($event)} />
+<p><counter duration={duration} on-tick={this._onTick($event)} /></p>
+<p><counter duration={duration} animation="scroll" on-tick={this._onTick($event)} /></p>
+<p><counter duration={duration} animation="flip" on-tick={this._onTick($event)} /></p>
+<p><counter duration={duration} animation="flipHalf" on-tick={this._onTick($event)} /></p>
 ```
 
 ```javascript

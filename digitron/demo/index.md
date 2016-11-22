@@ -8,4 +8,3 @@
 <button on-click={this.$refs.digitron.increase()}>inc</button>
 <button on-click={this.$refs.digitron.decrease()}>dec</button>
 ```
-
