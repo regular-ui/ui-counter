@@ -13,7 +13,7 @@ import Regular from 'regularjs';
 //   }
 // })
 
-import Digitron from './digitron';
-import Counter from './counter';
+import Digitron from './src/digitron';
+import Counter from './src/counter';
 
 export { Digitron, Counter };

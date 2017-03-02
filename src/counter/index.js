@@ -4,8 +4,8 @@ import raf from 'raf';
 
 /**
  * @class Counter
- * @extend Component
- * @param {object}                  options.data                     =  绑定属性
+ * @extends Component
+ * @param {Object}                  options.data                     =  绑定属性
  * @param {string='Hello World'}    options.data.message            <=> 消息
  * @param {boolean=false}           options.data.disabled            => 是否禁用
  * @param {boolean=true}            options.data.visible             => 是否显示

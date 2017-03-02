@@ -1,2 +1,2 @@
-@import './digitron/index.mcss';
-@import './counter/index.mcss';
+@import './src/digitron/index.mcss';
+@import './src/counter/index.mcss';
